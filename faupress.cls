@@ -1300,6 +1300,8 @@
     giveninits   = true  ,
     maxnames     = 15    ,
     maxcitenames = 2     ,
+    natbib=true,
+    style=authoryear
   ]{biblatex} % 2019/12/01 v3.14
   
   \defbibheading{faupress-subbibliography}[\refname]{\section*{#1}}
@@ -1418,7 +1420,7 @@
       \iffaupress@studentbibliography
         \renewcommand{\thefootnote}{\fnsymbol{footnote}}%
         \newrefcontext[labelprefix = S]%
-        \printbibliography[ title = \studentbibname\protect{\footnote[1]{\bibasterisk}},
+        \printbibliography[ title = \studentbibname,
                             heading = faupress-subbibliography,
                             keyword = student, resetnumbers ]%
         \renewcommand{\thefootnote}{\arabic{footnote}}%
