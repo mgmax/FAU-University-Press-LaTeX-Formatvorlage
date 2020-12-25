@@ -1719,6 +1719,7 @@
       \label{faupressacronyms}
         \acsetup{list-style = faupress-abbr, extra-style = faupress-abbr, list-heading = section*} 
         \printacronyms[name = \listabbrname, exclude-classes = symbol, #1]
+        \label{faupresssymbols}
         \acsetup{list-style = faupress-symbol, extra-style = faupress-symbol, list-heading = section*} 
         \printacronyms[name = \listsymbolname, include-classes = symbol, #1]
       \cleardoublepage
@@ -1730,6 +1731,8 @@
   \iffaupress@combinedacronym
   
     \renewcommand*{\faupressprintacronyms}[1][]{
+     \label{faupressacronyms}
+     \label{faupresssymbols}
       \acsetup{list-style = faupress-symbol, extra-style = faupress-symbol, list-heading = addchap}
       \printacronyms[name = \acroname, #1]
       \cleardoublepage
@@ -1741,6 +1744,7 @@
   \iffaupress@abbreviation
   
     \renewcommand*{\faupressprintacronyms}[1][]{
+      \label{faupressacronyms}
       \acsetup{list-style = faupress-abbr, extra-style = faupress-abbr, list-heading = addchap}
       \printacronyms[name = \listabbrname, exclude-classes = symbol, #1]
       \cleardoublepage
@@ -1752,6 +1756,7 @@
   \iffaupress@symbol
   
     \renewcommand*{\faupressprintacronyms}[1][]{
+      \label{faupresssymbols}
       \acsetup{list-style = faupress-symbol, extra-style = faupress-symbol, list-heading = addchap}
       \printacronyms[name = \listsymbolname, include-classes = symbol, #1]
       \cleardoublepage
