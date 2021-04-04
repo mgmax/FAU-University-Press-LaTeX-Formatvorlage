@@ -1414,6 +1414,7 @@
         \newrefcontext[labelprefix = P]%
         \printbibliography[ title = \ownbibname, heading = faupress-subbibliography,
                             keyword = own, resetnumbers ]%
+       	\label{bib-own}
         \clearpage%
       \fi
       %
@@ -1423,6 +1424,7 @@
         \printbibliography[ title = \studentbibname,
                             heading = faupress-subbibliography,
                             keyword = student, resetnumbers ]%
+       	\label{bib-student}
         \renewcommand{\thefootnote}{\arabic{footnote}}%
       \fi
       %
