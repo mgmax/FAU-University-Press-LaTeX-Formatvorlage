@@ -2041,3 +2041,6 @@
 % Allow ragged page bottoms
 \raggedbottom
 \listfiles
+
+
+\setkomafont{descriptionlabel}{\rmfamily\bfseries}
