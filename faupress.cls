@@ -910,16 +910,16 @@
 
 \addto\captionsenglish{%
   \def\introductionname{Introduction}%
-  \def\acroname{List of Symbols and Abbreviations}%
-  \def\listabbrname{List of Abbreviations}%
-  \def\listsymbolname{List of Symbols}%
+  \def\acroname{Symbols and Abbreviations}%
+  \def\listabbrname{Abbreviations}%
+  \def\listsymbolname{Important Symbols}%
   \def\abbrname{Abbreviation}%
   \def\descriptionname{Description}%
   \def\unitname{Unit}%
   \def\symbolname{Symbol}%
   \def\mainbibname{Bibliography}%
-  \def\ownbibname{Own publications referring to this work}%
-  \def\studentbibname{Students’ theses referring to this work}%
+  \def\ownbibname{Own publications}%
+  \def\studentbibname{Students’ theses}%
   \def\bibasterisk{The 2nd (3rd) author names the supervisor; the last author
     is head of the institute.}%
 }
@@ -1703,7 +1703,7 @@
   % Extra style for units
   \DeclareAcroExtraStyle{faupress-abbr}{inline}{
     brackets = true, 
-    punct = true
+    punct = false
   }
   % Extra style for units
   \DeclareAcroExtraStyle{faupress-symbol}{inline}{
@@ -1788,6 +1788,7 @@
 %%% DEFINE NEW COMMANDS FOR VARIOUS EXTRA META INFO %%%
 
 % author
+\newcommand{\draftversion}{}
 
 \newcommand*\firstname[1]{\gdef\@firstname{#1}}
 \newcommand\@firstname{\@latex@error{no \noexpand\firstname given}\@ehc}
@@ -1921,6 +1922,8 @@
       {\usekomafont{subtitle} \@subtitle\par}
     \end{minipage}\par
     \vfill
+    \textcolor{ACMRed}{\usekomafont{subtitle} \draftversion} % \todo{}
+    \vfill
     \begin{minipage}[t]{\textwidth}
       \RaggedRight
       \usekomafont{institute} \@institute \\
@@ -1934,7 +1937,7 @@
     \next@tpage
     Bibliografische Information der Deutschen Nationalbibliothek: \\
     Die Deutsche Nationalbibliothek verzeichnet diese Publikation in der
-    Deutschen Nationalbibliografie; detaillierte bibliografische Daten sind
+    Deut\-schen Nationalbibliografie; detaillierte bibliografische Daten sind
     im Internet über \href{http://dnb.d-nb.de}{http://dnb.d-nb.de} abrufbar.\par
     \vspace{2em}
     Bitte zitieren als\\
@@ -1944,14 +1947,14 @@
     \@series \@addperiod{\@volume} Erlangen: FAU University Press. DOI:~\href{http://dx.doi.org/\@doi}{\@doi}.\par}
     \vspace{2em}
     Das Werk, einschließlich seiner Teile, ist urheberrechtlich geschützt.\\
-    Die Rechte an allen Inhalten liegen bei ihren jeweiligen Autoren.
+    Die Rechte an allen Inhalten liegen bei ihren jeweiligen Autoren.\\
     Sie sind nutzbar unter der Creative Commons Lizenz BY-NC.\par
     \vspace{2em}
-    Der vollständige Inhalt des Buchs ist als PDF über den OPUS Server
+    Der vollständige Inhalt des Buchs ist als PDF über den OPUS Server\\
     der Friedrich-Alexander-Universität Erlangen-Nürnberg abrufbar:\\
     \href{https://opus4.kobv.de/opus4-fau/home}{https://opus4.kobv.de/opus4-fau/home}\par
     \vspace{4em}
-    Verlag und Auslieferung:
+    Verlag und Auslieferung:\\
     FAU University Press, Universitätsstraße 4, 91054 Erlangen\par
     \vfill
     \@printinformation\par
