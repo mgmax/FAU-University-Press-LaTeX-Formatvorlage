@@ -1749,7 +1749,7 @@
       \label{faupressacronyms}
       \acsetup{list-style = faupress-abbr, extra-style = faupress-abbr, list-heading = addchap}
       \printacronyms[name = \listabbrname, exclude-classes = symbol, #1]
-      \cleardoublepage
+      %\cleardoublepage
       \addtocounter{table}{-1}
     }
 
